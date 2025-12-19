@@ -1,65 +1,29 @@
-import Image from "next/image";
-
 export default function Home() {
+  const products = [
+    { name: "Hydrating Serum", price: "$45", category: "Serums", image: "https://images.pexels.com/photos/5632382/pexels-photo-5632382.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "Vitamin C Cream", price: "$38", category: "Moisturizers", image: "https://images.pexels.com/photos/3762882/pexels-photo-3762882.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "Retinol Night Treatment", price: "$52", category: "Night Care", image: "https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "Gentle Cleanser", price: "$28", category: "Cleansers", image: "https://images.pexels.com/photos/6621163/pexels-photo-6621163.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "SPF 50 Sunscreen", price: "$32", category: "Sun Protection", image: "https://images.pexels.com/photos/1377034/pexels-photo-1377034.jpeg?auto=compress&cs=tinysrgb&w=800" },
+    { name: "Eye Repair Complex", price: "$48", category: "Eye Care", image: "https://images.pexels.com/photos/4620866/pexels-photo-4620866.jpeg?auto=compress&cs=tinysrgb&w=800" }
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="min-h-screen bg-white">
+      <header className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+        <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="text-3xl">��️</span>
+            <div><h1 className="text-2xl font-bold">Modern Glow Skincare</h1><p className="text-xs text-white/80">Clean Beauty, Glowing Results</p></div>
+          </div>
+          <div className="flex gap-6"><a href="#products" className="hover:text-purple-100 transition">Shop</a><a href="#about" className="hover:text-purple-100 transition">About</a><a href="#contact" className="hover:text-purple-100 transition">Contact</a><button className="bg-white text-purple-600 px-6 py-2 rounded-full font-semibold hover:bg-purple-50 transition">Cart (0)</button></div>
+        </nav>
+      </header>
+      <section className="relative h-[600px] overflow-hidden"><img src="https://images.pexels.com/photos/5632382/pexels-photo-5632382.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Skincare" className="w-full h-full object-cover"/><div className="absolute inset-0 bg-gradient-to-r from-purple-900/70 to-indigo-900/50 flex items-center"><div className="max-w-7xl mx-auto px-6"><div className="max-w-2xl text-white"><h2 className="text-6xl font-bold mb-6">Radiant Skin Starts Here</h2><p className="text-xl mb-8">Premium, cruelty-free skincare formulated with natural ingredients</p><button className="bg-purple-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-600 transition shadow-lg">Shop Collection</button></div></div></div></section>
+      <section id="products" className="py-20 bg-gray-50"><div className="max-w-7xl mx-auto px-6"><div className="text-center mb-16"><h2 className="text-4xl font-bold text-gray-900 mb-4">Our Best Sellers</h2><p className="text-xl text-gray-600">Clean, effective skincare you'll love</p></div><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{products.map((product, idx) => (<div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"><div className="relative h-64"><img src={product.image} alt={product.name} className="w-full h-full object-cover"/><div className="absolute top-4 right-4 bg-purple-500 text-white px-4 py-2 rounded-full font-bold">{product.price}</div></div><div className="p-6"><span className="text-xs text-purple-600 font-semibold">{product.category}</span><h3 className="text-xl font-bold text-gray-900 mt-1 mb-4">{product.name}</h3><button className="w-full bg-gradient-to-r from-purple-500 to-indigo-500 text-white py-3 rounded-full font-semibold hover:from-purple-600 hover:to-indigo-600 transition">Add to Cart</button></div></div>))}</div></div></section>
+      <section id="about" className="py-20 bg-white"><div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"><div><h2 className="text-4xl font-bold text-gray-900 mb-6">Why Modern Glow?</h2><p className="text-lg text-gray-600 mb-6">We believe in clean, science      <section id="about" vers real results without compromising your health or the planet.</p><ul className="space-y-4"><li className="flex gap-3"><span className="text-purple-500 text-2xl">✓</span><div><h3 className="font-semibold text-lg">Clean Ingredients</h3><p className="text-gray-600">No parabens, sulfates, or harmful chemicals</p></div></li><li className="flex gap-3"><span className="text-purple-500 text-2xl">✓</span><div><h3 className="font-semibold text-lg">Cruelty-Free</h3><p className="text-gray-600">Never tested on animals</p></div></li><li className="flex gap-3"><span className="text-purple-500 text-2xl">✓</span><div><h3 className="font-semibold text-lg">Sustainable</h3><p className="text-gray-600">Eco-friendly packaging and practices</p></div></li></ul></div><div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl"><img src="https://images.pexels.com/photos/3997991/pexels-photo-3997991.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Skincare Products" className="w-full h-full object-cover"/></div></div></section>
+      <section id="contact" className="py-20 bg-gradient-to-br from-purple-50 to-indigo-50"><div className="max-w-4xl mx-auto px-6 text-center"><h2 className="text-4xl font-bold text-gray-900 mb-6">Get Your Glow On</h2><p className="text-xl text-gray-600 mb-12">Subscribe for exclusive offers and skincare tips</p><div className="bg-white rounded-2xl p-8 shadow-xl"><div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"><div><div className="text-3xl mb-2">📧</div><h3 className="font-semibold mb-1">Email</h3><p className="text-gray-600">hello@modernglow.com</p></div><div><div className="text-3xl mb-2">📱</div><h3 className="font-semibold mb-1">Phone</h3><p className="text-gray-600">(555) 234-5678</p></div><div><div className="text-3xl mb-2">🌐</div><h3 className="font-semibold mb-1">Social</h3><p className="text-gray-600">@modernglowskin</p></div></div><div className="flex gap-4"><input type="email" placeholder="Enter your email" className="flex-1 px-6 py-4 border-2 border-gray-200 rounded-full focus:border-purple-500 focus:outline-none"/><button className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 rounded-full font-semibold hover:from-purple-600 hover:to-indigo-600 transition shadow-lg">Subscribe</button></div></div></div></section>
+      <footer className="bg-gray-900 text-gray-300 py-12"><di      <footer className="bg-gray-900 text-gray-300 py-12"><di      <footer className="bg-gray-900 text-gray-300 py-12"><di      <footer className="bg-gray-900 text-gray-300 py-12"><di      <footer className="bg-gray-900 text-gray-300 py-12"><di      <footer className="bg-gray-900 text-gray-300 py-12"><di      <footer className="bg-gray-900 text-gray-300 py-12"><di      <footer className="bg-gray-900 text-gray-300 py-12"><di      <footer className="bg-gray-900 text-gray-300 py-12"><di      <footer className="bg-gray-900 text-gray-300 py-12"><di      <footer className="bg-gray-900 text-gray-300 py-12"><di      <footer className="bg-gray-900 text-gray-300 py-12"><di      <footer className="bg-gray-900 text-gray-300 py-12"><di      <footer className="bg-gray-900 text-gray-300 py-12"><di      <footer className="bg-gray-900 text-gray-300 py-12"><di      <footer className="bg-gray-900 text-gray-300 py-12"><di      <footer clav></div><div className="border-t border-gray-800 pt-6 text-center text-sm"><p>&copy; 2025 Modern Glow Skincare. All rights reserved. | Powered by <a href="https://pitchmarketing.agency" className="text-purple-400 hover:text-purple-300">Pitch Marketing Agency</a></p></div></div></footer>
     </div>
   );
 }
